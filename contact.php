@@ -32,35 +32,7 @@
 <body class="sub_page">
   <div class="hero_area">
     <!-- header section strats -->
-    <header class="header_section">
-      <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg custom_nav-container">
-          <a class="navbar-brand" href="index.html">
-            <span>
-              UXOS
-            </span>
-          </a>
-
-          <div class="navbar-collapse" id="">
-            <div class="custom_menu-btn">
-              <button onclick="openNav()">
-                <span class="s-1"> </span>
-                <span class="s-2"> </span>
-                <span class="s-3"> </span>
-              </button>
-            </div>
-            <div id="myNav" class="overlay">
-              <div class="overlay-content">
-                <a href="index.html">HOME</a>
-                <a href="about.html">ABOUT</a>
-                <a href="feature.html">FEATURE</a>
-                <a href="contact.html">CONTACT US</a>
-              </div>
-            </div>
-          </div>
-        </nav>
-      </div>
-    </header>
+    <?php include_once "assets/parts/header.php" ?>
     <!-- end header section -->
   </div>
 
@@ -113,101 +85,8 @@
 
   <!-- end contact section -->
   <!-- info section -->
-  <section class="info_section layout_padding-top">
-    <div class="info_logo-box">
-      <h2>
-        UXOS
-      </h2>
-    </div>
-    <div class="container layout_padding2">
-      <div class="row">
-        <div class="col-md-3">
-          <h5>
-            About Us
-          </h5>
-          <p>
-            dolor sit amet, consectetur magna aliqua. Ut enim ad minim veniam, quisdotempor incididunt r
-          </p>
-        </div>
-        <div class="col-md-3">
-          <h5>
-            Useful Link
-          </h5>
-          <ul>
-            <li>
-              <a href="">
-                Video games
-              </a>
-            </li>
-            <li>
-              <a href="">
-                Remote control
-              </a>
-            </li>
-            <li>
-              <a href="">
-                3d controller
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-md-3">
-          <h5>
-            Contact Us
-          </h5>
-          <p>
-            dolor sit amet, consectetur magna aliqua. quisdotempor incididunt ut e
-          </p>
-        </div>
-        <div class="col-md-3">
-
-          <div class="subscribe_container">
-            <h5>
-              Newsletter
-            </h5>
-            <div class="form_container">
-              <form action="">
-                <input type="email" placeholder="Enter your email">
-                <button type="submit">
-                  Subscribe
-                </button>
-              </form>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="social_container">
-
-        <div class="social-box">
-          <a href="">
-            <img src="images/fb.png" alt="">
-          </a>
-
-          <a href="">
-            <img src="images/twitter.png" alt="">
-          </a>
-          <a href="">
-            <img src="images/linkedin.png" alt="">
-          </a>
-          <a href="">
-            <img src="images/instagram.png" alt="">
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- end info section -->
-  <!-- footer section -->
-  <section class="container-fluid footer_section">
-    <p>
-      &copy; 2019 All Rights Reserved. Design by
-      <a href="https://html.design/">Free Html Templates</a>
-    </p>
-  </section>
+ 
+  <?php include_once "assets/parts/footer.php" ?>
   <!-- footer section -->
 
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
