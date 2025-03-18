@@ -415,34 +415,8 @@
           Check what people say About us!
         </h2>
       </div>
-      <div class="client_container layout_padding2-top">
-        <div class="client-id">
-          <div class="img-box">
-            <img src="images/client.png" alt="" />
-          </div>
-          <div class="name">
-            <img src="images/quote.png" alt="" />
-            <h6>
-              Sandy Delex
-            </h6>
-            <p>
-              Reprehenderit
-            </p>
-          </div>
-        </div>
-        <div class="client-detail">
-          <p>
-            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-            veniam, quis nostrud esse cillum
-          </p>
-        </div>
-        <div class="d-flex justify-content-end">
-          <a href="">
-            Read More
-          </a>
-        </div>
-      </div>
+      <?php include_once "assets/functions.php";
+          setResponses(dir:"images/quotes");?>
     </div>
   </section>
 

@@ -1,0 +1,26 @@
+{
+    "client_name":{
+        "rick.png":"Rick Astley",
+        "sandy.png":"Sandy Jonhson",
+        "olga.png":"Olha Muzyka"
+    },
+
+    "client_response":{
+        "rick.png":"Your app is incredible instrument for creating merch pages and web-stores. Me and my collegues using it for promoting their music.",
+        "sandy.png":"Real devs may love code, but a good tool should let anyone build a site as easily as playing a game.",
+        "olga.png":"Building a website on mobile should be like sketching—fast, fluid, and intuitive."
+    },
+
+    "client_link":{
+        "rick.png":"https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "sandy.png":"https://www.youtube.com/@GMTK",
+        "olga.png":"https://www.behance.net/olhamuzyka"
+    },
+
+    "client_role":{
+        "rick.png":"Musician",
+        "sandy.png":"Game Developer",
+        "olga.png":"Graphic Designer"
+    }
+
+}
