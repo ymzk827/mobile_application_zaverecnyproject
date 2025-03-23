@@ -1,7 +1,6 @@
 
 <?php
 
-
     function setResponses($dir){
         
     $files = glob($dir . "/*.png");    
