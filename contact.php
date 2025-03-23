@@ -51,22 +51,24 @@
           <form action="">
             <div class="contact_form-container">
               <div>
+                <form action="">
                 <div>
-                  <input type="text" placeholder="Name">
+                  <input type="text" name="name" id="name" placeholder="Name">
                 </div>
                 <div>
-                  <input type="text" placeholder="Phone Number">
+                  <input type="text" name="phonenumber" id="phonenumber" placeholder="Phone Number">
                 </div>
                 <div>
-                  <input type="email" placeholder="Email">
+                  <input type="email" name="email" id="email" placeholder="Email">
                 </div>
                 <div class="mt-5">
-                  <input type="text" placeholder="Message">
+                  <input type="text" name="msg" id="msg" placeholder="Message">
                 </div>
                 <div class="mt-5">
                   <button type="submit">
                     send
                   </button>
+                </form>
                 </div>
               </div>
 
