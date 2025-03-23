@@ -1,4 +1,5 @@
-<?php 
+
+<?php
 
     function setResponses($dir){
         
@@ -42,4 +43,5 @@
     }
 
 }
+
 ?>
