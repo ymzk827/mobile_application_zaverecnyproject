@@ -415,8 +415,14 @@
           Check what people say About us!
         </h2>
       </div>
-      <?php include_once "assets/functions.php";
-          setResponses(dir:"images/quotes");?>
+      
+        <!-- tu musi byť funkcia ktora insertuje udaje z suboru JSON do DB, ale pre mňa to na dany momen bolo ťažko, urobim to v ďaľšich kommitach -->
+        <?php
+          include_once "functions/database.php";
+          use database\feedbackManager;
+          $feedback = new feedbackManager();
+          $feedback->generateFeedback();
+        ?>
     </div>
   </section>
 
