@@ -418,8 +418,8 @@
       
         <!-- tu musi byť funkcia ktora insertuje udaje z suboru JSON do DB, ale pre mňa to na dany momen bolo ťažko, urobim to v ďaľšich kommitach -->
         <?php
-          include_once "functions/database.php";
-          use database\feedbackManager;
+          include_once "functions/feedback.php";
+          use data\feedbackManager;
           $feedback = new feedbackManager();
           $feedback->generateFeedback();
         ?>
