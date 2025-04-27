@@ -22,7 +22,7 @@
         <?php else: ?>
             <div style="text-align: center; margin-top: 20px;">
                 <span style="color: black; font-size: 14px;">
-                    You are not logged in. Please <a href="http://127.0.0.1/edsa-project/loginpage.php" style="color: blue;">log in</a> or <a href="http://127.0.0.1/edsa-project/loginpage.php" style="color: blue;">register</a>.
+                    You are not logged in. Please <a href="http://127.0.0.1/edsa-project/loginpage.php" style="color: blue;">log in</a> or <a href="http://127.0.0.1/edsa-project/registerpage.php" style="color: blue;">register</a>.
                 </span>
             </div>
         <?php endif; ?>

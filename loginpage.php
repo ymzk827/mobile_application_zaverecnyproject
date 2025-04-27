@@ -41,9 +41,9 @@
   <section class="contact_section layout_padding">
     <div class="container">
       <div class="d-flex ">
-        <h2>
-          Contact Us
-        </h2>
+        <h1>
+          LOGIN
+        </h1>
       </div>
       <div class="row">
         <div class="col-md-6">
