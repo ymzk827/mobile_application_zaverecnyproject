@@ -48,37 +48,32 @@
       <div class="row">
         <div class="col-md-6">
 
-        <?php include_once "functions/formular.php";
-        include_once "functions/formular.php";
-        use data\Formular;
-        
-        $formular = new Formular();
-        
-        // Spracovanie formulára, len ak bol odoslaný
+        <?php include_once "functions/login.php";
+        use data\userManager;
+        $UM = new userManager();
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $formular->sendFormular();
+            $UM->register($_POST['login'], $_POST['email'], $_POST['password'], $rola="user");
         }
         ?>
 
-          <form action="" method="post">
+          <form action="", method="post">
             <div class="contact_form-container">
               <div>
+                <form action="">
                 <div>
-                  <input type="text" placeholder="Name" name="name">
+                  <input type="text" name="login" id="login" placeholder="Login">
                 </div>
                 <div>
-                  <input type="text" placeholder="Phone Number" name="phone">
+                  <input type="text" name="email" id="email" placeholder="E-Mail">
                 </div>
                 <div>
-                  <input type="email" placeholder="Email" name="email">
-                </div>
-                <div class="mt-5">
-                  <input type="text" placeholder="Message" name="sprava">
+                  <input type="password" name="password" id="password" placeholder="Password">
                 </div>
                 <div class="mt-5">
                   <button type="submit">
-                    send
+                    Register
                   </button>
+                </form>
                 </div>
               </div>
 
