@@ -439,20 +439,32 @@
       <div class="row">
         <div class="col-md-6">
 
-          <form action="">
+        <?php include_once "functions/formular.php";
+        include_once "functions/formular.php";
+        use data\Formular;
+        
+        $formular = new Formular();
+        
+        // Spracovanie formulára, len ak bol odoslaný
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $formular->sendFormular();
+        }
+        ?>
+
+          <form action="" method="post">
             <div class="contact_form-container">
               <div>
                 <div>
-                  <input type="text" placeholder="Name">
+                  <input type="text" placeholder="Name" name="name">
                 </div>
                 <div>
-                  <input type="text" placeholder="Phone Number">
+                  <input type="text" placeholder="Phone Number" name="phone">
                 </div>
                 <div>
-                  <input type="email" placeholder="Email">
+                  <input type="email" placeholder="Email" name="email">
                 </div>
                 <div class="mt-5">
-                  <input type="text" placeholder="Message">
+                  <input type="text" placeholder="Message" name="sprava">
                 </div>
                 <div class="mt-5">
                   <button type="submit">
@@ -480,14 +492,9 @@
 
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="js/nav.js"></script>
 
   <script>
-    function openNav() {
-      document.getElementById("myNav").classList.toggle("menu_width");
-      document
-        .querySelector(".custom_menu-btn")
-        .classList.toggle("menu_btn-style");
-    }
   </script>
 </body>
 

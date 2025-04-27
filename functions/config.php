@@ -1,10 +1,10 @@
 <?php
-define('DATABASE', [
+$config = [
     'HOST' => 'localhost',
     'DBNAME' => 'zaverecny_project',
     'PORT' => 3306,
     'USER_NAME' => 'root',
     'PASSWORD' => ''
-]);
+];
 
 ?>
