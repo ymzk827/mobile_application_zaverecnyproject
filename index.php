@@ -16,6 +16,7 @@
 
   <!-- slider stylesheet -->
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/loader.css" />
 
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
@@ -32,7 +33,8 @@
 <body>
   <div class="hero_area">
     <!-- header section strats -->
-    <?php include_once "assets/parts/header.php" ?>
+    <?php include_once "assets/parts/header.php";?>
+    
     <!-- end header section -->
     <!-- slider section -->
     <section class=" slider_section position-relative">
@@ -98,7 +100,6 @@
     <div class="container">
       <div class="heading_container">
         <h2>
-          Amazing Features To Use <br />
           Our Application
         </h2>
       </div>
