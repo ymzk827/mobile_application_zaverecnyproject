@@ -15,6 +15,7 @@ class Formular extends Database {
         $this->connect();
     }
 
+
     private function connect() {
         global $config;
 
@@ -52,6 +53,12 @@ class Formular extends Database {
                 ':cislo' => $cislo,
                 ':sprava' => $sprava
             ]);
+            
+            echo '<script type="text/javascript">',
+                    'window.location.replace("http://127.0.0.1/edsa-project/thankyou.php");',
+                '</script>'
+                ;
+        
         } catch (PDOException $e) {
             echo "Chyba pri ukladaní formulára: " . $e->getMessage();
         }
