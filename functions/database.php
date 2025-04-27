@@ -10,7 +10,7 @@ class Database {
     }
 
     private function connect() {
-        $config = DATABASE;
+        global $config;
 
         $options = array(
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
