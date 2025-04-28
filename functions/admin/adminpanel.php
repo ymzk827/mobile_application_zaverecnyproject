@@ -1,4 +1,5 @@
-<?php 
+<?php  
+
 namespace data;
 
 require_once('database.php');
@@ -10,12 +11,33 @@ use Database;
 use mailSender;
 
 
-class userManager extends Database {
+class adminPanel extends Database {
     public $conn;
-    public $confirmation = FALSE;
 
     public function __construct() {
         $this->connect();
+    }
+
+
+    private function connect() {
+        global $config;
+
+        $options = array(
+            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
+        );
+
+        try {
+            $this->conn = new PDO(
+                'mysql:host='.$config['HOST'].';dbname='.$config['DBNAME'].';port='.$config['PORT'],
+
+                $config['USER_NAME'],
+                $config['PASSWORD'],
+                $options
+            );
+        } catch (PDOException $e) {
+            die("Chyba pripojenia: " . $e->getMessage());
+        }
     }
 
     public function generateCode($length = 5) {
@@ -105,7 +127,6 @@ class userManager extends Database {
 
         } 
 
-        //funkcia ktora vytvorena na uverenie učtu použivateľov.
         public function activate($email, $code){  
             $sql = "SELECT * FROM user WHERE email = ? AND regcode = ?";
             $stmt = $this->conn->prepare($sql);
@@ -129,5 +150,10 @@ class userManager extends Database {
             } 
 
     }}
+
+
+class 
+
+
 
 ?>

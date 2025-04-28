@@ -3,6 +3,8 @@ namespace data;
 
 class mailSender{
 
+    //script ktory posela jednoduchu spravu s overovacim kodom na email použivatelia pri prihlasení  
+
     public function sendMail($to, $username, $regcode){
         $subject = "Register confirmation";
         
@@ -30,16 +32,15 @@ class mailSender{
         mail($to,$subject,$message,$headers);
     }
 
-    public function sendMailConfirmed($to, $username){
+    //posela konečny mail po overovaní učtu
+    public function sendMailConfirmed($to){
         $subject = "Your account sucessfully created";
         
         $message = "
         <html>
         <head>
-        <title>HTML email</title>
         </head>
         <body>
-        <p>Hello ".$username.",</p>
         <h1>Thank you for confirmation!</h1>
         <h3>You can freely use our service. Sign up on our login page</h3>
         <a href='http://127.0.0.1/edsa-project/loginpage.php'>Confirm here</a>
