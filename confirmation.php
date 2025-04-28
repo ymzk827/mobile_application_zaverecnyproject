@@ -42,7 +42,7 @@
     <div class="container">
       <div class="d-flex ">
         <h1>
-          REGISTER
+          Confirm your account. Paste code from email below:
         </h1>
       </div>
       <div class="row">
@@ -51,9 +51,8 @@
         <?php include_once "functions/login.php";
         use data\userManager;
         $UM = new userManager();
-        $act = "false";
-        if ($_SERVER['REQUEST_METHOD'] === 'POST' || $UM->confirmation == 'FALSE') {
-            $UM->register($_POST['login'], $_POST['email'], $_POST['password'], $rola="user", $act);
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $UM->activate($_POST['login'], $_POST['code']);
         }
         ?>
 
@@ -62,17 +61,14 @@
               <div>
                 <form action="">
                 <div>
-                  <input type="text" name="login" id="login" placeholder="Login">
+                  <input type="text" name="login" id="login" placeholder="Your account email">
                 </div>
                 <div>
-                  <input type="text" name="email" id="email" placeholder="E-Mail">
-                </div>
-                <div>
-                  <input type="password" name="password" id="password" placeholder="Password">
+                  <input type="code" name="code" id="code" placeholder="Your confirmation code">
                 </div>
                 <div class="mt-5">
-                  <button type="submit">
-                    Register
+                  <button type="Confirm account">
+                    Login
                   </button>
                 </form>
                 </div>
