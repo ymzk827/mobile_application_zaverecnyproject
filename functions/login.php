@@ -11,12 +11,7 @@ use mailSender;
 
 
 class userManager extends Database {
-    public $conn;
     public $confirmation = FALSE;
-
-    public function __construct() {
-        $this->connect();
-    }
 
     public function generateCode($length = 5) {
         $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';

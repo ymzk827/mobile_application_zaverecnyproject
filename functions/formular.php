@@ -11,10 +11,6 @@ use Database;
 class Formular extends Database {
     public $conn;
 
-    public function __construct() {
-        $this->connect();
-    }
-
     public function sendFormular() {
         try {
             $name = $_POST['name'];  // for text input

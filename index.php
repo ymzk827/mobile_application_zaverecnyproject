@@ -415,10 +415,24 @@
         <h2>
           Check what people say About us!
         </h2>
-      </div><?php
+      </div>
+      
+      <?php
           include_once "functions/feedback.php";
+          include_once "functions/admin/adminpanel.php";
+
+          use data\adminPanel;
           use data\feedbackManager;
+
           $feedback = new feedbackManager();
+          $admin = new adminPanel();
+          
+          if (isset($_SESSION['user_id'])) {
+              if ($_SESSION['rola'] == 'admin') {
+                $admin->showEditButton();
+              }
+          }
+
           $feedback->generateFeedback();
         ?></div>
   </section>
@@ -437,7 +451,6 @@
         <div class="col-md-6">
 
         <?php include_once "functions/formular.php";
-        include_once "functions/formular.php";
         use data\Formular;
         
         $formular = new Formular();
