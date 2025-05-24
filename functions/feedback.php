@@ -26,7 +26,7 @@ class feedbackManager extends Database {
                 echo '<div class="client_container layout_padding2-top">';
                 echo '<div class="client-id">';
                 echo '<div class="img-box">';
-                echo '<img src="images/quotes/'.$row["img_filename"].'" alt="" />';
+                echo '<img src="'.$row["img_filename"].'" alt="" />';
                 echo '</div>';
                 echo '<div class="name">';
                 echo '<img src="images/quote.png" alt="" />';
