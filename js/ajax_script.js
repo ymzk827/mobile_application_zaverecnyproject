@@ -24,6 +24,26 @@ function deleteFeedback(id) {
   }
 }
 
+function promoteUser(id) {
+  if (confirm("Promote user with ID " + id + " to admin?")) {
+    fetch("functions/admin/promote_user.php", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      body: "id=" + encodeURIComponent(id)
+    })
+    .then(response => response.text())
+    .then(text => {
+      alert(text);
+      if (text.includes("Success")) {
+        location.reload();
+      }
+    })
+    .catch(err => console.error("Promote failed:", err));
+  }
+}
+
 document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('.edit-btn').forEach(button => {
     button.addEventListener('click', function () {
