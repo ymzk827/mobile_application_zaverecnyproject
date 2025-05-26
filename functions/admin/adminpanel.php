@@ -33,6 +33,7 @@ class adminPanel extends Database {
             $results = $stmt->fetchAll();
 
             // vytvorenie prvkov v akordeone aj použivanie udajov z DB
+            
             foreach ($results as $row) {
               echo "<tr data-id='{$row['id']}'>
                     <td >{$row['id']}</td>

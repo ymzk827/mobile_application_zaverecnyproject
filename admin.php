@@ -40,11 +40,17 @@
             </tr>
           </thead>
           <?php
+          session_start();
           include_once 'functions/admin/adminpanel.php';
           use data\adminPanel;
           $admin = new adminPanel();
           
-           $admin->getUserInfo();
+           
+           if ($_SESSION['rola'] == 'admin') {
+                $admin->getUserInfo();
+              } else {
+                echo "You dont have permission to edit";
+              }
           ?>
         </table>
       </div>
@@ -65,7 +71,12 @@
             </tr>
           </thead>
           <?php
-           $admin->getFeedback();
+           
+           if ($_SESSION['rola'] == 'admin') {
+                $admin->getFeedback();
+              } else {
+                echo "You dont have permission to edit";
+              };
           ?>
         </table>
       </div>
